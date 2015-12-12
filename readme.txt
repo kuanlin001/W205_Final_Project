@@ -16,7 +16,7 @@ A streamparse program consumes data from Kafka and persists data into MongoDB as
 * Start the data generator (Spark and Kafka):
   1.) Make sure that Kafka server is running and <cloned directory>/data_generator/compiled/run.sh points to the right location for the Spark library
   2.) Make sure that <cloned directory>/data_generator/compiled/run.sh is executable
-  3.) Execute the script <cloned directory>/data_generator/compiled/run.sh, which will start four parallel data sources with Spark and pushing data into Kafka
+  3.) Navigate to directory cloned directory>/data_generator/compiled/, and execute ./run.sh.  It is important the current directory is changed to 'compiled' as the script is looking for subdirectories using relative path.
   
 * Start the data consumer (streamparse):
   <<streamparse instruction goes here>>
