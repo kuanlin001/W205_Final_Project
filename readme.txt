@@ -23,3 +23,7 @@ A streamparse program consumes data from Kafka and persists data into MongoDB as
   
 * Data visualization:
   <<data visualization instruction goes here>>
+  
+
+========== temp note from Alan: in the middle of consolidation, and I just uploaded 2-week old version as a starter 
+========== will update and integrate with both data gen and data presentation over night (Sun-Mon)....  
