@@ -8,6 +8,7 @@ The following dependencies must be setup before running the code
 5.) streamparse is installed
 6.) Spark is installed, and the Spark library file is located in /home/w205/spark15/lib/spark-assembly-1.5.0-hadoop2.6.0.jar
     If the Spark library is in a different location, modify <cloned directory>/data_generator/compiled/run.sh to point to the right location
+7.) Hadoop/Hive is installed and running
 	
 ==========Running the code==========
 This program uses Spark to generate data which is pushed into Kafka
@@ -19,7 +20,11 @@ A streamparse program consumes data from Kafka and persists data into MongoDB as
   3.) Navigate to directory <cloned directory>/data_generator/compiled/, and execute ./run.sh  It is important the current directory is changed to 'compiled' as the script is looking for subdirectories using relative path.
   
 * Start the data consumer (streamparse):
-  <<streamparse instruction goes here>>
+  1.) Make sure the streamparse directory data_streaming is properly installed (copied)
+  2.) Make sure Mongo DB is up and running with the minimal initialization covered
+  3.) Make sure Hive is properly configured by executing hive_init.sh
+  4.) Make sure the corresponding Kafka producer is running
+  5.) At a proper stage, make sure the remote process connects to Hive and MongoDB properly
   
 * Data visualization:
   <<data visualization instruction goes here>>
