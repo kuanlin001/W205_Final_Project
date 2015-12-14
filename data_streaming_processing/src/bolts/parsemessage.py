@@ -6,7 +6,8 @@ connection = Connection("localhost")
  
 db = connection.product1
  
-import re from streamparse.bolt import Bolt
+import re 
+from streamparse.bolt import Bolt
 
 class ParseMessage (Bolt):
     def initialize(self, conf, ctx):
