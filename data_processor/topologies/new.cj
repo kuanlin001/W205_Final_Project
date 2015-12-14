@@ -21,7 +21,7 @@
     ;; bolt configuration 1 the mongodb bolt
      "F-bolt" (python-bold-spec
           options
-          {"M-spout" :shuffle}
+          {"P-bolt" ["measure"]}
           "bolts.flatten.Flatten"
           ["record"]
           )
