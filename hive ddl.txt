@@ -1,0 +1,10 @@
+CREATE EXTERNAL TABLE IF NOT EXISTS ProductMeasures
+(PRODUCTID varchar(500),
+DATE varchar(500),
+TIME varchar(500),
+MEASUREID varchar(500),
+MEASURE varchar(500))
+row format delimited
+fields terminated by ','
+stored as textfile
+LOCATION '/user/root/ProductMeasures';

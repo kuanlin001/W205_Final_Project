@@ -1,0 +1,3 @@
+tmp.py:#import pymongo
+tmp.py:from pymongo import Connection
+tmp.py:from pymongo import MongoClient

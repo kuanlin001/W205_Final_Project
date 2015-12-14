@@ -2,7 +2,7 @@
   (:use     [streamparse.specs])
   (:gen-class))
 
-(defn tweetcount [options]
+(defn termproject [options]
    [
     ;; spout configuration
     {"M-spout" (python-spout-spec
