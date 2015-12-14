@@ -27,7 +27,14 @@ A streamparse program consumes data from Kafka and persists data into MongoDB as
   5.) At a proper stage, make sure the remote process connects to Hive and MongoDB properly
   
 * Data visualization:
-  <<data visualization instruction goes here>>
+  
+  Note: While this process is almost entirely the same for both HDFS connection and mongoDB, the expense of a mongoDB driver
+  led us to only connect to Hiveserver2, so the following instructions are for connection to the Hive server
+
+  1) Open Tableau, and connect to a server by clicking "Cloudera Hadoop"
+  2) Enter server IP, select User Name, and enter root
+  3) Select default, and select full table and drag to upper right hand corner
+  4) Click on 
   
 
 ========== temp note from Alan: in the middle of consolidation, and I just uploaded 2-week old version as a starter 
