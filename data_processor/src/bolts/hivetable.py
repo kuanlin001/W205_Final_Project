@@ -13,11 +13,11 @@ class HiveTable(Bolt):
         #if yes, do nothing
         self.full_name = dir + self.out_name
         if os.path.isfile(self.full_name): #already opened before open with append
-            self.out_file = open(self.full_name, 'a')
+            self.out_file = open(self.full_name, 'a', 0)
  
         else:
             #if no, create a file with today's date
-            self.out_file = open(self.full_name, 'w')
+            self.out_file = open(self.full_name, 'w', 0)
         #save the file name as self.out_name
 
     def process(self, tup):
@@ -30,7 +30,7 @@ class HiveTable(Bolt):
         if self.out_name != this_date:
             self.out_file.close()
             self.full_name = dir + this_date
-            self.out_file = open(self.full_name, 'w') # new file
+            self.out_file = open(self.full_name, 'w', 0) # new file
         rec  = ','.join([m['pid'],m['value'],m['unit'],m['date'],m['time']])+"\n"
 	self.out_file.write(rec)
         self.emit([rec])
