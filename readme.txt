@@ -19,10 +19,11 @@ A streamparse program consumes data from Kafka and persists data into MongoDB as
   2.) Make sure that <cloned directory>/data_generator/compiled/run.sh is executable
   3.) Navigate to directory <cloned directory>/data_generator/compiled/, and execute ./run.sh  It is important the current directory is changed to 'compiled' as the script is looking for subdirectories using relative path.
   
-* Start the data consumer (streamparse):
+* Start the data consumer (Kafka, Sparse, MongoDB, and Hive):
+
   1.) Make sure the streamparse directory data_streaming is properly installed (copied)
-  2.) Make sure Mongo DB is up and running with the minimal initialization covered
-  3.) Make sure Hive is properly configured the ddl at hive.ddl
+  2.) Make sure MongoDB is up and running with the minimal initialization covered
+  3.) Make sure Hive is properly configured the ddl at hive.ddl, running hive as 'sudo -u root hive'
   4.) Make sure, in one of the W205 AMI convention, the directory /data exists
   4.) Make sure the Kafka Zookeeper and Server are up and running
   5.) Make sure the remote process connects to hive2 properly (server id at 'hive2.connection')
@@ -37,7 +38,3 @@ A streamparse program consumes data from Kafka and persists data into MongoDB as
   2) Enter server IP, select User Name, and enter root
   3) Select default, and select full table and drag to upper right hand corner
   4) Click on 
-  
-
-========== temp note from Alan: in the middle of consolidation, and I just uploaded 2-week old version as a starter 
-========== will update and integrate with both data gen and data presentation over night (Sun-Mon)....  
