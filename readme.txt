@@ -23,8 +23,8 @@ A streamparse program consumes data from Kafka and persists data into MongoDB as
 
   1.) Make sure the streamparse directory data_streaming is properly installed (copied)
   2.) Make sure MongoDB is up and running with the minimal initialization covered
-  3.) Make sure Hive is properly configured the ddl at hive.ddl, running hive as 'sudo -u root hive'
-  4.) Make sure, in one of the W205 AMI convention, the directory /data exists
+  3.) Make sure Hive is properly configured the ddl at hive.ddl, which defines the data and makes the external path link
+  4.) Make sure, as in one of the W205 AMI convention, the directory /data exists
   4.) Make sure the Kafka Zookeeper and Server are up and running
   5.) Make sure the remote process connects to hive2 properly (server id at 'hive2.connection')
   6.) When 1-5 is ready, navigate to <cloned directory>/data_processor and execute 'sparse run'  

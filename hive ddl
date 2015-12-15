@@ -4,7 +4,8 @@ DATE varchar(500),
 TIME varchar(500),
 MEASURE varchar(500),
 UNIT varchar(500))
-row format delimited
-fields terminated by ','
-stored as textfile
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
 LOCATION 'file:///data/ProductMeasures';
+LOAD DATA LOCAL INPATH '/data/ProductMeasures' INTO TABLE ProductMeasures;
