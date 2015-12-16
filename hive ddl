@@ -1,9 +1,9 @@
 CREATE EXTERNAL TABLE IF NOT EXISTS ProductMeasures
 (PRODUCTID varchar(500),
-DATE varchar(500),
-TIME varchar(500),
 MEASURE varchar(500),
-UNIT varchar(500))
+UNIT varchar(500)),
+DATE varchar(500),
+TIME varchar(500)
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
