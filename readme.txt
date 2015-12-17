@@ -9,6 +9,7 @@ The following dependencies must be setup before running the code
 6.) Spark is installed, and the Spark library file is located in /home/w205/spark15/lib/spark-assembly-1.5.0-hadoop2.6.0.jar
     If the Spark library is in a different location, modify <cloned directory>/data_generator/compiled/run.sh to point to the right location
 7.) Hadoop/Hive is installed and running
+8.) Python Kafka client is installed (pip install kafka-python)
 	
 ==========Running the code==========
 This program uses Spark to generate data which is pushed into Kafka
