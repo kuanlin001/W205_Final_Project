@@ -27,10 +27,9 @@ A streamparse program consumes data from Kafka and persists data into MongoDB as
   2.) Make sure MongoDB is up and running with the minimal initialization covered
   3.) Execute hive_ddl.sql in Hive to setup data schema definition.
   4.) Make sure, as in one of the W205 AMI convention, the directory /data exists
-  5.) Create a directory /data/ProductMeasures/ if it does not already exist
-  6.) Make sure the Kafka Zookeeper and Server are up and running
-  7.) Make sure the remote process connects to hive2 properly (server id at 'hive2.connection')
-  8.) When 1-5 is ready, navigate to <cloned directory>/data_processor and execute 'sparse run'  
+  5.) Make sure the Kafka Zookeeper and Server are up and running
+  6.) Make sure the remote process connects to hive2 properly (server id at 'hive2.connection')
+  7.) When 1-5 is ready, navigate to <cloned directory>/data_processor and execute 'sparse run'  
   
 * Data visualization:
   
