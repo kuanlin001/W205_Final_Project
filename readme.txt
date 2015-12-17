@@ -4,7 +4,8 @@ The following dependencies must be setup before running the code
 1.) Kafka server is running
 2.) A mongoDB instance is running and listening to localhost on port 27017 (mongoDB default)
 3.) Python2.7 is the default python version
-4.) pymongo is installed in Python library
+4.) pymongo2.7.2 is installed in Python library (sudo pip install pymongo==2.7.2)
+    * pymongo verion is important.  Newer pymongo version may not be compatible with the API we use.
 5.) streamparse is installed
 6.) Spark is installed, and the Spark library file is located in /home/w205/spark15/lib/spark-assembly-1.5.0-hadoop2.6.0.jar
     If the Spark library is in a different location, modify <cloned directory>/data_generator/compiled/run.sh to point to the right location
