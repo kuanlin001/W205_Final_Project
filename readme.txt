@@ -11,7 +11,7 @@ The following dependencies must be setup before running the code
     If the Spark library is in a different location, modify <cloned directory>/data_generator/compiled/run.sh to point to the right location
 7.) Hadoop/Hive is installed and running
 8.) Python Kafka client is installed (pip install kafka-python)
-9.) HiveServer2 service is running.  We will use use Tabuleau to connect to Hive.
+9.) HiveServer2 service is running (hive --services hiveserver2 &).  We will use use Tabuleau to connect to Hive.
 	
 ==========Running the code==========
 This program uses Spark to generate data which is pushed into Kafka
