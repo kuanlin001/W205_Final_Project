@@ -40,4 +40,33 @@ A streamparse program consumes data from Kafka and persists data into MongoDB as
   1) Open Tableau, and connect to a server by clicking "Cloudera Hadoop"
   2) Enter server IP, select User Name, and enter root
   3) Select default, and select full table and drag to upper right hand corner
-  4) Click on 
+  4) Adjust measures to following types, if necessary:
+      Date: Date
+      Measure Type: String
+      Pid (Product ID): String
+      Time: Date & Time
+      Measure Value: Numeric(Decimal)
+  5) Drag Measure Value to Measures Pane, and change default aggregation from Sum to Avg
+  6) All time-wise views:
+      1) Optional: Drag Date to Columns section, and expand to "Day"
+      2) Drag Time to Columns section, and expand to preferred granularity (likely "Hour" or "Minute")
+  7) Product-focused view:
+      1) Call the product(s) you want to investigate "P"
+      2) Drag Pid to the rows field, and filter to only show P
+      3) Drag the Measure Type field to the rows column, and filter to desired measure types
+      4) Drag Measure Value to the rows column
+      5) If desired, drag Measure Value to the rows column again and change Measure attribute to desired (e.g. Standard Deviation)
+      6) Right click on Measure Value portion of the display, where the y-axis is, and select "Edit Axis". Change axis to "Independent axis ranges...", click Apply, and click OK
+  8) Measure-Focused view:
+      1) Call the measure(s) you want to investigate "M"
+      2) Drag Measure Type to the rows field, and filter to only show M
+      3) Drag the Pid field to the rows column, and filter to desired products
+      4) Drag Measure Value to the rows column
+      5) If desired, drag Measure Value to the rows column again and change Measure attribute to desired (e.g. Standard Deviation)
+      6) Right click on Measure Value portion of the display, where the y-axis is, and select "Edit Axis". Change axis to "Independent axis ranges...", click Apply, and click OK
+  9) Hollistic view:
+      1) Drag Measure Type to rows field, and filter to desired measures
+      2) Drag Measure Value to rows field, as many times as desired, selecting desired Measure attribute each time
+      3) Drag Pid to the Color Pane under "All"
+      4) Right click on Measure Value portion of the display, where the y-axis is, and select "Edit Axis". Change axis to "Independent axis ranges...", click Apply, and click OK
+
